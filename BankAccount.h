@@ -16,4 +16,6 @@ public:
 	BankAccount(const std::string& _idAccount, const std::string& _idClient);
 
 	void credit(const float amount);
+
+	void infos() const;
 };

@@ -10,3 +10,11 @@ void BankAccount::credit(const float amount) {
 		std::cout << "Le montant doit être positif !" << std::endl;
 	}
 }
+
+void BankAccount::infos() const {
+	std::cout << "Vous avez : " << balance << " euros." << std::endl;
+	std::cout << "Voici la liste des opérations :" << std::endl;
+	for (int i = 0; i < listOp.size(); i++) {
+		std::cout << i << " : " << listOp[i] << std::endl;
+	}
+}
