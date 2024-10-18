@@ -18,4 +18,5 @@ public:
 	void credit(const float amount);
 
 	void infos() const;
+	void retrait(const float amount);
 };
