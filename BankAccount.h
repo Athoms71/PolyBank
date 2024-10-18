@@ -4,15 +4,15 @@
 
 class BankAccount {
 private:
-	std::string idAccount;
-	std::string idClient;
+	const std::string idAccount;
+	const std::string idClient;
 
 	float solde = 0;
 
 	std::vector<std::string> listOp;
 
 public:
-	BankAccount(std::string _idAccount, std::string idClient);
+	BankAccount(const std::string& _idAccount, const std::string& _idClient);
 
 
 };
