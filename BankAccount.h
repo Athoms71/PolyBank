@@ -13,6 +13,7 @@ private:
 
 public:
 	BankAccount(const std::string& _idAccount, const std::string& _idClient);
+	void transfert(BankAccount account2, char idAccount2, float amount, char comment);
 
 
 };
