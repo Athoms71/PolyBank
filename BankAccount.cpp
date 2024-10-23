@@ -2,7 +2,11 @@
 
 BankAccount::BankAccount(const std::string& _idAccount, const std::string& _idClient) : idAccount(_idAccount), idClient(_idClient) {}
 
-void BankAccount::transfert(BankAccount account2, char idAccount2, float amount, char comment) {
+const std::string& BankAccount::getIdAccount() const {
+	return idAccount;
+}
+
+void BankAccount::transfert(BankAccount& account2, float amount, const std::string& comment) {
 	if (amount <= 0) {
 		std::cout << "Le montant doit etre positif !" << std::endl;
 	}
@@ -12,7 +16,7 @@ void BankAccount::transfert(BankAccount account2, char idAccount2, float amount,
 	else {
 		balance -= amount;
 		account2.credit(amount);
-		std::cout << "Transfert de " << amount << "€ vers le compte " << account2.idAccount2 << " effectué." << std::endl;
+		std::cout << "Transfert de " << amount << "€ vers le compte " << account2.getIdAccount() << " effectué." << std::endl;
 	}
 
 }
