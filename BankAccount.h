@@ -8,7 +8,7 @@ private:
 	const std::string idAccount;
 	const std::string idClient;
 
-	float balance = 0;
+	float balance = 0.0f;
 
 	std::vector<std::string> listOp;
 
